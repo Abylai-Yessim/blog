@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #f00;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12%;
+    box-sizing: border-box;
+}
+header div a{
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+}

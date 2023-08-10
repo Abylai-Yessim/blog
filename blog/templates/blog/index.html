@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+</head>
+<body>
+    <header>
+        {% for m in menu %}
+
+        <div><a href="{% url m.url %}">{{ m.title }}</a></div>
+
+        {% endfor %}
+    </header>
+    <h1>Главная страница</h1>
+    <button>click</button>
+
+    <ul>
+        {% for person in people %}
+
+        {% if person.age >= 18 and person.age <= 18 %}
+
+        <li>Name: {{person.name}}, age: {{ person.age }}</li>
+
+        {% else %}
+
+        <li>Name: {{person.name}}, age: {{ person.age }}, Not Needed</li>
+
+        {% endif %}
+
+        {% endfor %}
+    </ul>
+
+    <img src="{% static 'blog/images/Рисунок1.jpg' %}" alt="">
+</body>
+</html>
